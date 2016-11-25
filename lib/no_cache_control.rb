@@ -10,7 +10,7 @@ module NoCacheControl
   end
 
   def set_no_cache_control
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate, private"
 
     # Pragma and Expires are not a true header defined in RFC, however some browsers accepts them
     response.headers["Pragma"] = "no-cache"
